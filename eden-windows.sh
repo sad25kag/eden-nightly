@@ -31,6 +31,12 @@ echo "-- Applying updater patch..."
 patch -p1 < ../patches/update.patch
 echo "   Done."
 
+if [[ "$ARCH" == "arm64" ]]; then
+    echo "-- Applying updater patch..."
+    patch -p1 < ../patches/arm.patch
+    echo "   Done."
+fi
+
 # Set Base CMake flags
 declare -a BASE_CMAKE_FLAGS=(
     "-DBUILD_TESTING=OFF"

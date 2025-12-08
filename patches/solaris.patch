@@ -1,8 +1,16 @@
 diff --git a/externals/ffmpeg/CMakeLists.txt b/externals/ffmpeg/CMakeLists.txt
-index 58461d8934..7dcdf5eb69 100644
+index d71613db8c..f93bd4ed51 100644
 --- a/externals/ffmpeg/CMakeLists.txt
 +++ b/externals/ffmpeg/CMakeLists.txt
-@@ -267,7 +267,7 @@ else()
+@@ -217,7 +217,6 @@ else()
+                 --disable-ffmpeg
+                 --disable-ffprobe
+                 --disable-network
+-                --disable-postproc
+                 --disable-swresample
+                 --enable-decoder=h264
+                 --enable-decoder=vp8
+@@ -257,7 +256,7 @@ else()
          OUTPUT
              ${FFmpeg_BUILD_LIBRARIES}
          COMMAND

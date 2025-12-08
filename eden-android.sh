@@ -24,9 +24,16 @@ echo "   Done."
 if [ "$TARGET" = "Coexist" ]; then
     # Change the App name and application ID to make it coexist with official build
 	echo "-- Applying coexist patch..."
-    git apply ../patches/coexist.patch
+	git apply ../patches/coexist.patch
 	echo "   Done."
 fi        
+
+if [ "$TARGET" = "ChromeOS" ]; then
+    # try to fix build error
+	echo "-- Applying arm patch..."
+	git apply ../patches/arm.patch
+	echo "   Done."
+fi
 
 # Set extra cmake flags
 CMAKE_FLAGS=(
